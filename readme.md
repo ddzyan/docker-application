@@ -2,6 +2,9 @@
 记录各种应用的docker或者docker-compose的安装
 
 ## 更新记录
+- [2022-01-07]
+1. 增加 portainer 
+
 - [2021-11-30]
 1. 增加 ELK 安装
 
