@@ -1,0 +1,13 @@
+version: '2'
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    environment:
+      - "RABBITMQ_DEFAULT_USER=admin"
+      - "RABBITMQ_DEFAULT_PASS=PwDF0hVBkNpkZGfkNI3Y"
+    ports:
+      - 61672:15672
+      - 61673:5672
+    restart: always
+    volumes:
+      - ./data:/var/lib/rabbitmq

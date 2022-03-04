@@ -1,0 +1,15 @@
+services:
+  mysql:
+		container_name: mysql5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: B9tiNZ7dXrk2qwr6
+    image: mysql:5.7
+    network_mode: bridge
+    ports:
+    - 13306:3306/tcp
+    restart: always
+    volumes:
+    - /home/ubuntu/docker/mysql/db:/var/lib/mysql:rw
+    - /home/ubuntu/docker/mysql/conf/my.cnf:/etc/my.cnf:rw
+    - /home/ubuntu/docker/mysql/init:/docker-entrypoint-initdb.d:rw
+version: '3.0'
