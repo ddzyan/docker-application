@@ -1,3 +1,5 @@
+version: '3.0'
+
 services:
   mysql:
 		container_name: mysql5.7
@@ -9,7 +11,6 @@ services:
     - 13306:3306/tcp
     restart: always
     volumes:
-    - /home/ubuntu/docker/mysql/db:/var/lib/mysql:rw
-    - /home/ubuntu/docker/mysql/conf/my.cnf:/etc/my.cnf:rw
-    - /home/ubuntu/docker/mysql/init:/docker-entrypoint-initdb.d:rw
-version: '3.0'
+    - ./db:/var/lib/mysql:rw
+    - ./conf/my.cnf:/etc/my.cnf:rw
+    - ./init:/docker-entrypoint-initdb.d:rw
