@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  mongo:
+    image: mongo:5.0.3-focal
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/db:/data/db
+      - ./data/config:/data/configdb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 12345678
+    container_name: mongo

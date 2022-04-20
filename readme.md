@@ -2,6 +2,9 @@
 记录各种应用的docker或者docker-compose的安装
 
 ## 更新记录
+- [2022-04-20]
+1. 增加 mongoDB 安装
+
 - [2022-03-04]
 1. 增加 RabbitMQ 安装
 
