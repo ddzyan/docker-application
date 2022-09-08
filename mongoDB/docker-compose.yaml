@@ -1,14 +1,13 @@
-version: '3.5'
+# 该Yaml文件改编自DockerHub中的配置文件
+version: '3.8'
 services:
   mongo:
-    image: mongo:5.0.3-focal
+    image: mongo:4.4.0 #根据需要选择自己的镜像
     restart: always
     ports:
-      - "27017:27017"
+      - 27017:27017 #对外暴露停供服务的端口，正式生产的时候理论不用暴露。
     volumes:
-      - ./data/db:/data/db
-      - ./data/config:/data/configdb
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 12345678
+      - ./data/db:/data/db # 挂载数据目录
+      - ./data/log:/var/log/mongodb # 挂载日志目录
+      - ./data/config:/etc/mongo # 挂载配置目录
     container_name: mongo
