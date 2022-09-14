@@ -8,7 +8,7 @@ docker exec -it mongo /bin/bash
 
 mongo
 use admin
-db.createUser({user:"root",pwd:"密码：12345678",roles:[{role:'root',db:'admin'}]})
+db.createUser({user:"root",pwd:"12345678",roles:[{role:'root',db:'admin'}]})
 exit
 exit
 
