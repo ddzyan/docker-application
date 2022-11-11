@@ -2,6 +2,9 @@
 记录各种应用的docker或者docker-compose的安装
 
 ## 更新记录
+- [2022-11-11]
+1. 增加 prometheus + grafana
+
 - [2022-04-20]
 1. 增加 mongoDB 安装
 

@@ -1,0 +1,9 @@
+[
+  {
+    "targets": ["${ip}:7001"],
+    "labels": {
+      "env": "prod",
+      "job": "api"
+    }
+  }
+]
