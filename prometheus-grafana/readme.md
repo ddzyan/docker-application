@@ -2,9 +2,13 @@
 搭建 Prometheus + Grafana 监控 node 程序
 
 # 使用
-修改采集的 targets.json：文件里面 ${ip} 替换为 Node.js 应用所在服务器的 ip 地址
+修改采集的 targets.json：文件里面 ${ip} 替换为 Node.js 应用所在服务器的 ip 地址（外网）
 
 ```shell
+$ mkdir grafana_data  grafana_log  prometheus_data
+
+$ chmod 777 grafana_data  grafana_log  prometheus_data
+
 $  docker-compose up -d
 ```
 
@@ -18,3 +22,5 @@ $ curl -X POST http://${prometheus的ip}:9090/-/reload
 ```shell
 http://${prometheus的ip}:9090/classic/targets
 ```
+
+访问 127.0.0.1:3000，默认账号密码：admin:admin。
